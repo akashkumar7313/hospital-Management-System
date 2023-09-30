@@ -4,7 +4,7 @@ import { BsTelephone } from "react-icons/bs";
 import { BsStopwatch } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsPinMap } from "react-icons/bs";
-import { 
+import {
     FcAlphabeticalSortingZa,
     FcOrgUnit,
     FcBiotech,
@@ -26,7 +26,14 @@ import {
     FcReadingEbook,
     FcList,
     FcReading,
- } from "react-icons/fc";
+    FcAddressBook,
+    FcLibrary,
+    FcAreaChart,
+    FcConferenceCall,
+    FcMoneyTransfer,
+    FcPodiumWithSpeaker,
+    FcPlanner,
+} from "react-icons/fc";
 import logo from "../assets/70619297f45c3ba6ba0d29dd83c63c8b.jpg";
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -34,91 +41,430 @@ import {
     ChevronDownIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import { Link, NavLink } from 'react-router-dom';
 
 const Masters = [
-    { name: '| Category', href: '/', icon: FcAlphabeticalSortingZa },       
-    { name: '| Units', href: '/', icon: FcOrgUnit },        
-    { name: '| Department', href: '/', icon: FcDepartment },        
-    { name: '| Test', href: '/', icon: FcBiotech },        
-    { name: '| Test Particulars', href: '/', icon: FcMindMap },        
-    { name: '| Blood Groups', href: '/', icon: FcStumbleupon },        
-    { name: '| Payment Mode', href: '/', icon: FcCurrencyExchange },        
-    { name: '| Nationality', href: '/', icon: FcBusinessman },        
+    {
+        name: "| Category",
+        href: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors",
+        icon: FcAlphabeticalSortingZa,
+    },
+    {
+        name: '| Units', href: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcOrgUnit
+    },
+    {
+        name: '| Department', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDepartment
+    },
+    {
+        name: '| Test', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcBiotech
+    },
+    {
+        name: '| Test Particulars', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcMindMap
+    },
+    {
+        name: '| Blood Groups', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcStumbleupon
+    },
+    {
+        name: '| Payment Mode', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcCurrencyExchange
+    },
+    {
+        name: '| Nationality', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcBusinessman
+    },
 ]
 
 const Doctor = [
-    { name: '| Doctor', href: '/', icon: FcPlus },       
-    { name: '| Add Doctor', href: '/', icon: FcAddDatabase },        
-    { name: '| Doctor Commision', href: '/', icon: FcDebt },        
-    { name: '| Report', href: '/', icon: FcViewDetails },                
+    {
+        name: '| Doctor', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcPlus
+    },
+    {
+        name: '| Add Doctor', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcAddDatabase
+    },
+    {
+        name: '| Doctor Commision', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDebt
+    },
+    {
+        name: '| Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcViewDetails
+    },
 ]
 
 const Patient = [
-    { name: '| Patient', href: '/', icon: FcPortraitMode },       
-    { name: '| Registration', href: '/', icon: FcAddDatabase },        
-    { name: '| Visit Details', href: '/', icon: FcNook },        
-    { name: '| Report Manager', href: '/', icon: FcViewDetails },                
+    {
+        name: '| Patient', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcPortraitMode
+    },
+    {
+        name: '| Registration', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcAddDatabase
+    },
+    {
+        name: '| Visit Details', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcNook
+    },
+    {
+        name: '| Report Manager', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcViewDetails
+    },
 ]
 
 const Invoice = [
-    { name: '| Create Invoice', href: '/', icon: FcDocument },       
-    { name: '| Bills', href: '/', icon: FcDiploma2 },                
-    { name: '| Bisiness Report', href: '/', icon: FcViewDetails },                
+    {
+        name: '| Create Invoice', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDocument
+    },
+    {
+        name: '| Bills', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
+    {
+        name: '| Bisiness Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcViewDetails
+    },
 ]
 
 const Pathology = [
-    { name: '| Pathology Report', href: '/', icon: FcDocument },       
-    { name: '| Pnnding Report', href: '/', icon: FcDiploma2 },                
-    { name: '| Completed Report', href: '/', icon: FcDiploma1 },                
-    { name: '| Finding Report', href: '/', icon: FcRules },                
-    { name: '| Report Manager', href: '/', icon: FcViewDetails },                
+    {
+        name: '| Pathology Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDocument
+    },
+    {
+        name: '| Pnnding Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
+    {
+        name: '| Completed Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma1
+    },
+    {
+        name: '| Finding Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Report Manager', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcViewDetails
+    },
 ]
 
 const Ledger = [
-    { name: '| Group', href: '/', icon: FcDocument },                      
-    { name: '| Ledger Group', href: '/', icon: FcDiploma1 },                
-    { name: '| Ledger Report', href: '/', icon: FcDiploma2 },                             
+    {
+        name: '| Group', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDocument
+    },
+    {
+        name: '| Ledger Group', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma1
+    },
+    {
+        name: '| Ledger Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
 ]
 
 const Supplier = [
-    { name: '| Item Type', href: '/', icon: FcList },                
-    { name: '| Vendor', href: '/', icon: FcReadingEbook },                             
-    { name: '| Item Master', href: '/', icon: FcDocument },                             
+    {
+        name: '| Item Type', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcList
+    },
+    {
+        name: '| Vendor', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReadingEbook
+    },
+    {
+        name: '| Item Master', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDocument
+    },
 ]
 
 const Purchase = [
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },                      
+    {
+        name: '| Item Inward', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
+    {
+        name: '| Manage Purchase', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReading
+    },
+    {
+        name: '| Purchase Report', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
 ]
 
 const Acount = [
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },  
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },  
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                      
+    {
+        name: '| Voucher Entry', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcAddressBook
+    },
+    {
+        name: '| Day Book', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReading
+    },
+    {
+        name: '| Trial Balance', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcCurrencyExchange
+    },
+    {
+        name: '| Cash & Bank Book', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcLibrary
+    },
+    {
+        name: '| Pfofit & Loss', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcAreaChart
+    },
+    {
+        name: '| Balance Sheet', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Delete Voucher', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
 ]
 
 const HRM = [
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                
-    { name: '| Manage Purchase', href: '/', icon: FcReading },                             
-    { name: '| Purchase Report', href: '/', icon: FcRules },
-    { name: '| Item Inward', href: '/', icon: FcDiploma2 },                                      
+    {
+        name: '| Employee Registration', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcConferenceCall
+    },
+    {
+        name: '| Employee Details', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReadingEbook
+    },
+    {
+        name: '| Employee Import', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Dept/Designation', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
+    {
+        name: '| Employee Attendance', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReading
+    },
+    {
+        name: '| Salary Scheme', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Employee Salary Scheme', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDebt
+    },
+    {
+        name: '| Salary Scheme', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcCurrencyExchange
+    },
+    {
+        name: '| Salary Generation', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcMoneyTransfer
+    },
+    {
+        name: '| Salary Slip/Payment', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
+    {
+        name: '| Daily Attendence', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcReading
+    },
+    {
+        name: '| Leave Assign', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Employee Leave Assign', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcPodiumWithSpeaker
+    },
+    {
+        name: '| Leave Application', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcPlanner
+    },
+    {
+        name: '| Advance Paid', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcRules
+    },
+    {
+        name: '| Security Deposit', tohref: "/",
+        component: Link,
+        className:
+            "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
+        content: "Our Directors", icon: FcDiploma2
+    },
 ]
 
 function classNames(...classes) {
@@ -132,7 +478,7 @@ export default function Navbar() {
         <div>
             <div>
                 <div className="bg-blue-500 h-[75px] lg:h-[30px] w-[100%]">
-                    <ul className='md:ml-8 flex flex-wrap md:gap-0 lg:gap-14 pt-2 sm:ml-2 text-[12px] sm:text-[14px] font-semibold justify-center  text-white drop-shadow-md'>
+                    <ul className='md:ml-8 flex flex-wrap md:gap-0 lg:gap-14 pt-1 sm:ml-2 text-[12px] sm:text-[14px] font-semibold justify-center  text-white drop-shadow-md'>
                         <li className=' flex items-center gap-2'>
                             <BsTelephone />
                             <span className='text-black'>Phone: <a className='text-white' href="tel:+91 8081405950">+91 5597892463</a></span>
@@ -152,8 +498,9 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
+            <hr />
             <header className="bg-blue-500">
-                <nav className="mx-auto flex max-w-10xl items-center justify-between p-4" aria-label="Global">
+                <nav className="mx-auto flex max-w-10xl items-center justify-between p-3" aria-label="Global">
                     {/* logo */}
                     <div className="flex lg:flex-1">
                         <a href="/" className="-m-1.5 p-1.5">
@@ -193,20 +540,31 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Masters.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
                             </Transition>
                         </Popover>
-                        
+
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
                                 Doctor
@@ -225,14 +583,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Doctor.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -257,14 +626,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Patient.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -289,14 +669,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Invoice.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -305,7 +696,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            Pathology
+                                Pathology
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -321,14 +712,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Pathology.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -337,7 +739,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            Ledger
+                                Ledger
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -353,14 +755,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Ledger.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -369,7 +782,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            Supplier
+                                Supplier
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -385,14 +798,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Supplier.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -401,7 +825,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            Purchase
+                                Purchase
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -417,14 +841,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Purchase.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -433,7 +868,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            Acount
+                                Acount
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -449,14 +884,25 @@ export default function Navbar() {
                                 <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[200px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {Acount.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -465,7 +911,7 @@ export default function Navbar() {
 
                         <Popover className="relative">
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-                            HRM
+                                HRM
                                 <ChevronDownIcon className="h-4 w-4 flex-none text-white" aria-hidden="true" />
                             </Popover.Button>
 
@@ -478,17 +924,28 @@ export default function Navbar() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[220px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
+                                <Popover.Panel className="absolute -left-10 top-full z-10 mt-3 w-[250px]  overflow-hidden rounded-[10px] bg-white shadow-lg ring-1 ring-gray-900/5">
                                     <div className=" divide-black bg-white ">
                                         {HRM.map((item) => (
-                                            <a
+                                            <div
                                                 key={item.name}
-                                                href={item.href}
-                                                className="flex items-start gap-x-1 p-3 text-sm font-semibold leading-5 text-gray-800 hover:bg-blue-100  hover:text-blue-500"
+                                                className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                                             >
-                                                <item.icon className="h-5 w-5 ml-2 flex-none" aria-hidden="true" />
-                                                {item.name}
-                                            </a>
+                                                <div className="flex-auto">
+                                                    {item.component ? (
+                                                        <item.component
+                                                            to={item.href}
+                                                            className={item.className}
+                                                        >
+                                                            {item.content}
+                                                        </item.component>
+                                                    ) : (
+                                                        <a href={item.href} className="block font-semibold">
+                                                            {item.name}
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ))}
                                     </div>
                                 </Popover.Panel>
@@ -548,15 +1005,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Masters].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -576,15 +1034,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Doctor].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -604,15 +1063,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Patient].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -632,15 +1092,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Invoice].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -652,7 +1113,7 @@ export default function Navbar() {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500">
-                                                Pathology
+                                                    Pathology
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -660,15 +1121,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Pathology].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -680,7 +1142,7 @@ export default function Navbar() {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500">
-                                                Ledger
+                                                    Ledger
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -688,15 +1150,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Ledger].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -708,7 +1171,7 @@ export default function Navbar() {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500">
-                                                Supplier
+                                                    Supplier
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -716,15 +1179,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Supplier].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -736,7 +1200,7 @@ export default function Navbar() {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500">
-                                                Purchase
+                                                    Purchase
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -744,15 +1208,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Purchase].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -764,7 +1229,7 @@ export default function Navbar() {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:text-blue-500">
-                                                Acount
+                                                    Acount
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -772,15 +1237,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...Acount].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
@@ -800,15 +1266,16 @@ export default function Navbar() {
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="mt-2 space-y-2">
                                                     {[...HRM].map((item) => (
-                                                        <Disclosure.Button
-                                                            key={item.name}
-                                                            as="a"
-                                                            href={item.href}
-                                                            className="rounded-lg py-1 pl-6 pr-3 text-sm flex gap-2 font-semibold leading-7 text-black hover:bg-blue-100  hover:text-blue-500"
-                                                        >
-                                                            <item.icon className="h-5 w-5 mt-1 flex-none" aria-hidden="true" />
-                                                            {item.name}
-                                                        </Disclosure.Button>
+                                                        <>
+                                                            <NavLink
+                                                                key={item.name}
+                                                                to={item.href}
+                                                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                                                activeClassName="active"
+                                                            >
+                                                                {item.name}
+                                                            </NavLink>
+                                                        </>
                                                     ))}
                                                 </Disclosure.Panel>
 
