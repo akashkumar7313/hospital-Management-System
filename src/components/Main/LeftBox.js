@@ -16,13 +16,13 @@ export default function LeftBox() {
         <LeftTable />
       <div className="bg-slate-200 h-[60px] w-[100%] rounded-b-[10px] flex items-center">
       <div className='flex px-4 gap-2'>
-            <button className="px-3 py-2 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
               <FcRules className="mt-1" /> Create Report
             </button>
-            <button className="px-3 py-2 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
               <FcRules className="mt-1" /> Create Report
             </button>
-            <button className="px-3 py-2 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
               <FcRules className="mt-1" /> Create Report
             </button>
           </div>

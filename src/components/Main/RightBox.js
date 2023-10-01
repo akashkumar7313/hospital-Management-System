@@ -1,7 +1,7 @@
-import React from 'react';
-import { FcRules } from 'react-icons/fc';
-import Datepicker from '../DatePicker';
-import RightTable from '../RightTable';
+import React from "react";
+import { FcRules } from "react-icons/fc";
+import Datepicker from "../DatePicker";
+import RightTable from "../RightTable";
 
 export default function RightBox() {
   return (
@@ -18,8 +18,19 @@ export default function RightBox() {
         </div>
       </div>
       <hr className="h-[1px] bg-gray-400 border-1"></hr>
-      <div className="overflow-y-auto h-[calc(100% - 60px - 1px)]">
-        <RightTable />
+      <RightTable />
+      <div className="bg-slate-200 h-[60px] w-[100%] rounded-b-[10px] flex items-center">
+        <div className="flex px-4 gap-2">
+          <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <FcRules className="mt-1" /> Create Report
+          </button>
+          <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <FcRules className="mt-1" /> Create Report
+          </button>
+          <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
+            <FcRules className="mt-1" /> Create Report
+          </button>
+        </div>
       </div>
     </div>
   );

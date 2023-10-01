@@ -91,10 +91,10 @@ const RightTable = () => {
 
   return (
     <section className="relative bg-blueGray-50">
-      <div className="w-full mb-12">
-        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-yellow-900 text-white">
+      <div className="w-full">
+        <div className="relative flex flex-col min-w-0 break-words w-full shadow-lg rounded bg-yellow-900 text-white">
           <div className="block w-full overflow-x-auto">
-            <div className="overflow-y-auto h-[650px]">
+            <div className="overflow-y-auto h-[480px]">
               <table className="items-center w-full bg-transparent border-collapse">
                 <thead className="sticky top-0">
                   <tr>
