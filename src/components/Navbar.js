@@ -33,6 +33,7 @@ import {
   FcMoneyTransfer,
   FcPodiumWithSpeaker,
   FcPlanner,
+  FcApproval
 } from "react-icons/fc";
 import logo from "../assets/70619297f45c3ba6ba0d29dd83c63c8b.jpg";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
@@ -252,7 +253,7 @@ const Pathology = [
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
     content: "Our Directors",
-    icon: FcDiploma1,
+    icon: FcApproval,
   },
   {
     name: "| Finding Report",
@@ -588,7 +589,7 @@ export default function Navbar() {
     <div>
       <div>
         <div className="bg-blue-500 h-[75px] lg:h-[30px] w-[100%]">
-          <ul className="md:ml-8 flex flex-wrap md:gap-0 lg:gap-14 pt-1 sm:ml-2 text-[12px] sm:text-[14px] font-semibold justify-center  text-white drop-shadow-md">
+          <ul className="md:ml-8 flex flex-wrap md:gap-0 lg:gap-7 pt-1 sm:ml-2 text-[12px] sm:text-[14px] font-semibold justify-center  text-white drop-shadow-md">
             <li className=" flex items-center gap-2">
               <BsTelephone />
               <span className="text-black">

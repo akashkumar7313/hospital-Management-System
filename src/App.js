@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Main from './components/Main';
+import MainBox from './components/MainBox';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Layout />}></Route>
         <Route element={<Navbar />} />
-        <Route element={<Main />} />
+        <Route element={<MainBox />} />
       </Routes>
     </Router>
   );
@@ -20,7 +20,7 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <Main />
+      <MainBox />
     </>
   );
 }
