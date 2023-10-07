@@ -101,7 +101,7 @@ const LeftTable = () => {
               <table className="items-center w-full bg-transparent border-collapse">
                 <thead className="sticky top-0">
                   <tr>
-                    <th className="px-6 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-cyan-500 text-white border-cyan-500">
+                    <th className="px-10 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-cyan-500 text-white border-cyan-500">
                       #
                     </th>
                     <th className="px-6 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-cyan-500 text-white border-cyan-500">
@@ -121,24 +121,31 @@ const LeftTable = () => {
                 </thead>
                 <tbody>
                   {dynamicData.map((item, index) => (
-                    <tr key={index}>
-                      <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4 text-left flex items-center">
+                    <tr
+                          key={index}
+                          className={
+                            index % 2 === 0
+                              ? "bg-pink-100 border border-t-slate-500 border-b-slate-500 "
+                              : "bg-slate-300"
+                          }
+                        >
+                      <th className="px-6 text-[16px] whitespace-nowrap p-2 text-left flex items-center">
                         <img
                           src={item.users[0]}
-                          className="h-8 w-8 bg-green-500 rounded-full border"
+                          className="h-9 w-9 bg-green-500 rounded-full border"
                           alt="..."
                         />
                       </th>
-                      <td className="border-t-0 px-6 text-black align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="px-6 text-black align-middle text-[16px] whitespace-nowrap p-2">
                         {item.patientName}
                       </td>
-                      <td className="border-t-0 px-6 align-middle text-pink-600 border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="px-6 align-middle text-pink-600 text-[16px] whitespace-nowrap p-2">
                         {item.mrNumber}
                       </td>
-                      <td className="border-t-0 px-6 align-middle text-green-600 border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="px-6 align-middle text-green-600 text-[16px] whitespace-nowrap p-2">
                         {item.reportNumber}
                       </td>
-                      <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="px-10 align-middle text-[16px] whitespace-nowrap p-2">
                         <button
                           className="text-white bg-black hover:bg-emerald-500 hover:text-white active:bg-emerald-600 uppercase px-5 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"

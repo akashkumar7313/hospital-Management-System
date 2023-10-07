@@ -16,7 +16,6 @@ import {
   FcViewDetails,
   FcDebt,
   FcAddDatabase,
-  FcPlus,
   FcPortraitMode,
   FcNook,
   FcDiploma2,
@@ -47,113 +46,103 @@ import { Link, NavLink } from "react-router-dom";
 const Masters = [
   {
     name: "| Category",
-    href: "/",
+    to: "/Master/Category",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcAlphabeticalSortingZa,
   },
   {
     name: "| Units",
-    href: "/",
+    to: "/Master/Unit",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcOrgUnit,
   },
   {
     name: "| Department",
-    herf: "/",
+    to: "/Master/Department",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDepartment,
   },
   {
     name: "| Test",
-    herf: "/",
+    to: "/Master/Test",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcBiotech,
   },
   {
     name: "| Test Particulars",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcMindMap,
   },
   {
     name: "| Blood Groups",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcStumbleupon,
   },
   {
     name: "| Payment Mode",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcCurrencyExchange,
   },
   {
     name: "| Nationality",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcBusinessman,
   },
 ];
 
 const Doctor = [
   {
-    name: "| Doctor",
-    herf: "/",
-    component: Link,
-    className:
-      "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
-    icon: FcPlus,
-  },
-  {
     name: "| Add Doctor",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcAddDatabase,
   },
   {
     name: "| Doctor Commision",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDebt,
   },
   {
     name: "| Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcViewDetails,
   },
 ];
@@ -161,38 +150,38 @@ const Doctor = [
 const Patient = [
   {
     name: "| Patient",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcPortraitMode,
   },
   {
     name: "| Registration",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcAddDatabase,
   },
   {
     name: "| Visit Details",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcNook,
   },
   {
     name: "| Report Manager",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcViewDetails,
   },
 ];
@@ -200,29 +189,29 @@ const Patient = [
 const Invoice = [
   {
     name: "| Create Invoice",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDocument,
   },
   {
     name: "| Bills",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma2,
   },
   {
     name: "| Bisiness Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcViewDetails,
   },
 ];
@@ -230,47 +219,47 @@ const Invoice = [
 const Pathology = [
   {
     name: "| Pathology Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDocument,
   },
   {
     name: "| Pnnding Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma2,
   },
   {
     name: "| Completed Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcApproval,
   },
   {
     name: "| Finding Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcRules,
   },
   {
     name: "| Report Manager",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcViewDetails,
   },
 ];
@@ -278,29 +267,29 @@ const Pathology = [
 const Ledger = [
   {
     name: "| Group",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDocument,
   },
   {
     name: "| Ledger Group",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma1,
   },
   {
     name: "| Ledger Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma2,
   },
 ];
@@ -308,29 +297,29 @@ const Ledger = [
 const Supplier = [
   {
     name: "| Item Type",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcList,
   },
   {
     name: "| Vendor",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcReadingEbook,
   },
   {
     name: "| Item Master",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDocument,
   },
 ];
@@ -338,29 +327,27 @@ const Supplier = [
 const Purchase = [
   {
     name: "| Item Inward",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma2,
   },
   {
     name: "| Manage Purchase",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcReading,
   },
   {
     name: "| Purchase Report",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcRules,
   },
 ];
@@ -368,65 +355,58 @@ const Purchase = [
 const Acount = [
   {
     name: "| Voucher Entry",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcAddressBook,
   },
   {
     name: "| Day Book",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcReading,
   },
   {
     name: "| Trial Balance",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcCurrencyExchange,
   },
   {
     name: "| Cash & Bank Book",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcLibrary,
   },
   {
     name: "| Pfofit & Loss",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcAreaChart,
   },
   {
     name: "| Balance Sheet",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcRules,
   },
   {
     name: "| Delete Voucher",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcDiploma2,
   },
 ];
@@ -434,146 +414,133 @@ const Acount = [
 const HRM = [
   {
     name: "| Employee Registration",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcConferenceCall,
   },
   {
     name: "| Employee Details",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcReadingEbook,
   },
   {
     name: "| Employee Import",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcRules,
   },
   {
     name: "| Dept/Designation",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcDiploma2,
   },
   {
     name: "| Employee Attendance",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcReading,
   },
   {
     name: "| Salary Scheme",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcRules,
   },
   {
     name: "| Employee Salary Scheme",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcDebt,
   },
   {
     name: "| Salary Scheme",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcCurrencyExchange,
   },
   {
     name: "| Salary Generation",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcMoneyTransfer,
   },
   {
     name: "| Salary Slip/Payment",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcDiploma2,
   },
   {
     name: "| Daily Attendence",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcReading,
   },
   {
     name: "| Leave Assign",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcRules,
   },
   {
     name: "| Employee Leave Assign",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
     icon: FcPodiumWithSpeaker,
   },
   {
     name: "| Leave Application",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcPlanner,
   },
   {
     name: "| Advance Paid",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcRules,
   },
   {
     name: "| Security Deposit",
-    herf: "/",
+    to: "/",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
-    content: "Our Directors",
+     
     icon: FcDiploma2,
   },
 ];

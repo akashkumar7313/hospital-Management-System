@@ -1,7 +1,7 @@
 import React from 'react'
 import LeftTable from './BottamBox/LeftTable'
 import RightTable from './BottamBox/RightTable'
-import { FcAddDatabase } from 'react-icons/fc'
+import { FcAddDatabase, FcConferenceCall } from 'react-icons/fc'
 
 export default function BottamBox() {
   return (
@@ -21,7 +21,7 @@ export default function BottamBox() {
         <RightTable/>
         <div className="flex px-4 py-3">
           <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
-            <FcAddDatabase className="mt-1" /> Daily Attendance
+            <FcConferenceCall className="mt-1" /> Daily Attendance
           </button>
         </div>
         </div>

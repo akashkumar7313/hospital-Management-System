@@ -117,29 +117,35 @@ const LeftTable = () => {
                     <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-cyan-500 text-white border-cyan-500">
                       Paid Amount
                     </th>
-                    <th className="px-2 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-cyan-500 text-white border-cyan-500"></th>
                   </tr>
                 </thead>
                 <tbody>
                   {dynamicData.map((item, index) => (
-                    <tr key={index}>
-                      <th className=" px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                    <tr
+                          key={index}
+                          className={
+                            index % 2 === 0
+                              ? "bg-pink-100 border border-t-slate-500 border-b-slate-500 "
+                              : "bg-slate-300"
+                          }
+                        >
+                      <th className=" px-4 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-2 text-left flex items-center">
                         <img
                           src={item.users[0]}
-                          className="h-10 w-10 border rounded-full"
+                          className="h-9 w-9 border rounded-full"
                           alt="..."
                         />
                       </th>
-                      <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="border-t-0 px-4 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap">
                         {item.date}
                       </td>
-                      <td className="border-t-0 px-10 align-middle border-l-0 text-pink-500 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="border-t-0 px-10 align-middle border-l-0 text-pink-500 border-r-0 text-[16px] whitespace-nowrap">
                         {item.invoiceNo}
                       </td>
-                      <td className="border-t-0 px-10 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="border-t-0 px-10 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap">
                         {item.billAmount}
                       </td>
-                      <td className="border-t-0 px-10 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap p-4">
+                      <td className="border-t-0 px-10 align-middle border-l-0 border-r-0 text-[16px] whitespace-nowrap">
                         {item.billAmount}
                       </td>
                     </tr>
