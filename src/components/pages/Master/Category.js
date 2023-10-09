@@ -12,7 +12,7 @@ import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import Navbar from "../../Navbar";
 import { NavLink } from "react-router-dom";
 import { Breadcrumbs } from "@material-tailwind/react";
-import { FcAlphabeticalSortingAz, FcPlus, FcRules } from "react-icons/fc";
+import { FcAlphabeticalSortingAz, FcPlus } from "react-icons/fc";
 
 export default function Category() {
   const dynamicData = [
@@ -147,7 +147,7 @@ export default function Category() {
               </div>
               <hr className="h-[1px] bg-gray-400 border-1"></hr>
               <div className="w-full overflow-x-auto rounded-b-[10px]">
-                <div className="overflow-y-auto h-[480px]">
+                <div className="overflow-y-auto h-auto">
                   <table className="items-center w-full bg-transparent border-collapse">
                     <thead className="sticky top-0">
                       <tr>

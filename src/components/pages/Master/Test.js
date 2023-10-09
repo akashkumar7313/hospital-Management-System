@@ -23,55 +23,6 @@ export default function Test() {
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
-    {
-      category: "HAEMATOLOGY",
-      shortName: "HMTLGY",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "SEROLOGY",
-      shortName: "SRLGY",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "MICROBIOLOGY",
-      shortName: "MBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "HISTOPATHOLOGY",
-      shortName: "HISTP",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "IMMUNOLOGY",
-      shortName: "IMMLG",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "COMPLETE BLOOD COUNT",
-      shortName: "CBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "ABSOLUTE EOSINOPHIL COUNT",
-      shortName: "EOSINOPHIL",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
   ];
 
   return (
@@ -152,7 +103,7 @@ export default function Test() {
               </div>
               <hr className="h-[1px] bg-gray-400 border-1"></hr>
               <div className="w-full overflow-x-auto rounded-b-[10px]">
-                <div className="overflow-y-auto h-[480px]">
+                <div className="overflow-y-auto h-auto">
                   <table className="items-center w-full bg-transparent border-collapse">
                     <thead className="sticky top-0">
                       <tr>

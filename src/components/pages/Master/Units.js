@@ -17,61 +17,27 @@ import { FcAlphabeticalSortingAz, FcPlus } from "react-icons/fc";
 export default function Units() {
   const dynamicData = [
     {
-      category: "BIOCHEMISTRY",
-      shortName: "BIOCHEM",
+      unit: "gm",
+      description: "gm",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
     {
-      category: "HAEMATOLOGY",
-      shortName: "HMTLGY",
+      unit: "%",
+      description: "percent",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
     {
-      category: "SEROLOGY",
-      shortName: "SRLGY",
+      unit: "gmm",
+      description: "gm",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
-    {
-      category: "MICROBIOLOGY",
-      shortName: "MBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "HISTOPATHOLOGY",
-      shortName: "HISTP",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "IMMUNOLOGY",
-      shortName: "IMMLG",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "COMPLETE BLOOD COUNT",
-      shortName: "CBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "ABSOLUTE EOSINOPHIL COUNT",
-      shortName: "EOSINOPHIL",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
+    
   ];
 
   return (
@@ -138,7 +104,7 @@ export default function Units() {
           </div>
           <hr className=" h-[1px] bg-gray-400 border-1"></hr>
           <div className="w-full p-5 ">
-            <div className="relative flex flex-col min-w-0 break-words w-full shadow-lg text-black border border-yellow-500 rounded-[10px]">
+            <div className="flex flex-col break-words h-auto w-full shadow-lg text-black border border-yellow-500 rounded-[10px]">
               <div className= "bg-slate-200 h-[60px] w-[100%] rounded-t-[10px] flex items-center justify-between">
               <p className="font-semibold text-xl px-4 flex items-center gap-2"> <FcAlphabeticalSortingAz className=" h-10 w-8"/> Manage Units</p>     
                     <button className="px-3 mx-5 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
@@ -147,7 +113,7 @@ export default function Units() {
               </div>
               <hr className="h-[1px] bg-gray-400 border-1"></hr>
               <div className="w-full overflow-x-auto rounded-b-[10px]">
-                <div className="overflow-y-auto h-[480px]">
+                <div className="overflow-y-auto h-auto">
                   <table className="items-center w-full bg-transparent border-collapse">
                     <thead className="sticky top-0">
                       <tr>
@@ -155,11 +121,11 @@ export default function Units() {
                           #
                         </th>
                         <th className="px-10 align-middle py-2 text-[16px]  uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
-                          Category
+                        unit
                         </th>
                         {/* Add the new heading */}
                         <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
-                          Short Name
+                        description
                         </th>
                         <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
                           Action
@@ -184,10 +150,10 @@ export default function Units() {
                             />
                           </th>
                           <td className="border-t-0 px-6 text-[16px] whitespace-nowrap p-4">
-                            {item.category}
+                            {item.unit}
                           </td>
                           <td className="border-t-0 px-6 text-[16px] whitespace-nowrap p-4">
-                            {item.shortName}
+                            {item.description}
                           </td>
                           <td className=" text-[16px] whitespace-nowrap p-2">
                             <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded-lg mr-2">
