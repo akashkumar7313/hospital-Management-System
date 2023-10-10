@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { FcAlphabeticalSortingAz, FcPlus } from "react-icons/fc";
 
-export default function Test() {
+export default function BloodGroups() {
   let count = 1;
 
   const dynamicData = [
@@ -74,7 +74,7 @@ export default function Test() {
               <div className=" sm:px-6 lg:px-5">
                 <div className="px-1 ">
                   <div>
-                    <h2 className=" mx-4 text-2xl font-semibold">Pathology Test Manager</h2>
+                    <h2 className=" mx-4 text-2xl font-semibold">Blood Groups</h2>
                     <Breadcrumbs className="flex">
                       <NavLink
                         to="/"
@@ -83,10 +83,10 @@ export default function Test() {
                         Dashboard
                       </NavLink>
                       <NavLink
-                        to="/Master/Test"
+                        to="/Master/BloodGroups"
                         className="text-[14px] font-semibold text-slate-500"
                       >
-                        Pathology Test
+                        Blood Groups
                       </NavLink>
                     </Breadcrumbs>
                   </div>
@@ -130,7 +130,7 @@ export default function Test() {
           <div className="w-full p-5 ">
             <div className="relative flex flex-col min-w-0 break-words w-full shadow-lg text-black border border-yellow-500 rounded-[10px]">
               <div className="bg-slate-200 h-[60px] w-[100%] rounded-t-[10px] flex items-center justify-between">
-                <p className="font-semibold text-xl px-4 flex items-center gap-2"> <FcAlphabeticalSortingAz className=" h-10 w-8" />Pathology Test</p>
+                <p className="font-semibold text-xl px-4 flex items-center gap-2"> <FcAlphabeticalSortingAz className=" h-10 w-8" />Blood Groups</p>
                 <div className="flex mx-5">
                   <button className="px-3 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
                     <FcPlus className="mt-1" /> Add New Test
@@ -232,7 +232,6 @@ export default function Test() {
                           </td>
                         </tr>
                       ))}
-
                     </tbody>
                   </table>
                 </div>

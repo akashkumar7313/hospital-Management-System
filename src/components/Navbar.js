@@ -81,7 +81,7 @@ const Masters = [
   },
   {
     name: "| Test Particulars",
-    to: "/",
+    to: "/Master/TestParticulars",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -90,7 +90,7 @@ const Masters = [
   },
   {
     name: "| Blood Groups",
-    to: "/",
+    to: "/Master/BloodGroups",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -99,7 +99,7 @@ const Masters = [
   },
   {
     name: "| Payment Mode",
-    to: "/",
+    to: "/Master/PaymentMode",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -108,7 +108,7 @@ const Masters = [
   },
   {
     name: "| Nationality",
-    to: "/",
+    to: "/Master/Nationality",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",

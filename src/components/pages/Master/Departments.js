@@ -17,57 +17,22 @@ import { FcAlphabeticalSortingAz, FcPlus } from "react-icons/fc";
 export default function Departments() {
   const dynamicData = [
     {
-      category: "BIOCHEMISTRY",
-      shortName: "BIOCHEM",
+      department: "Administration",
+      description: "Administration",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
     {
-      category: "HAEMATOLOGY",
-      shortName: "HMTLGY",
+      department: "XRAY",
+      description: "XRAY",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
     },
     {
-      category: "SEROLOGY",
-      shortName: "SRLGY",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "MICROBIOLOGY",
-      shortName: "MBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "HISTOPATHOLOGY",
-      shortName: "HISTP",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "IMMUNOLOGY",
-      shortName: "IMMLG",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "COMPLETE BLOOD COUNT",
-      shortName: "CBC",
-      users: [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
-      ],
-    },
-    {
-      category: "ABSOLUTE EOSINOPHIL COUNT",
-      shortName: "EOSINOPHIL",
+      department: "Pathology",
+      description: "Pathology",
       users: [
         "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Symbol_category_class.svg/996px-Symbol_category_class.svg.png",
       ],
@@ -154,12 +119,15 @@ export default function Departments() {
                         <th className="px-12 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
                           #
                         </th>
-                        <th className="px-10 align-middle py-2 text-[16px]  uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
-                          Category
+                        <th className="px-8 align-middle py-2 text-[16px]  uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
+                        department
                         </th>
                         {/* Add the new heading */}
                         <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
-                          Short Name
+                        description
+                        </th>
+                        <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
+                          Active
                         </th>
                         <th className="px-4 align-middle py-2 text-[16px] uppercase whitespace-nowrap font-semibold text-left bg-yellow-500 text-black border-cyan-500">
                           Action
@@ -184,10 +152,15 @@ export default function Departments() {
                             />
                           </th>
                           <td className="border-t-0 px-6 text-[16px] whitespace-nowrap p-4">
-                            {item.category}
+                            {item.department}
                           </td>
                           <td className="border-t-0 px-6 text-[16px] whitespace-nowrap p-4">
-                            {item.shortName}
+                            {item.description}
+                          </td>
+                          <td className=" text-[16px] whitespace-nowrap p-2">
+                            <button className="bg-green-600 hover:bg-green-800 text-white px-3 py-1 rounded-lg mr-2">
+                              Active
+                            </button>
                           </td>
                           <td className=" text-[16px] whitespace-nowrap p-2">
                             <button className="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded-lg mr-2">
