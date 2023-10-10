@@ -149,8 +149,8 @@ const Doctor = [
 
 const Patient = [
   {
-    name: "| Patient",
-    to: "/",
+    name: "| Patients",
+    to: "/Patient/Patients",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -159,7 +159,7 @@ const Patient = [
   },
   {
     name: "| Registration",
-    to: "/",
+    to: "/Patient/Registration",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -168,7 +168,7 @@ const Patient = [
   },
   {
     name: "| Visit Details",
-    to: "/",
+    to: "/Patient/VisitDetails",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -177,7 +177,7 @@ const Patient = [
   },
   {
     name: "| Report Manager",
-    to: "/",
+    to: "/Patient/ReportManager",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -189,7 +189,7 @@ const Patient = [
 const Invoice = [
   {
     name: "| Create Invoice",
-    to: "/",
+    to: "/Invoice/CreateInvoice",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -198,7 +198,7 @@ const Invoice = [
   },
   {
     name: "| Bills",
-    to: "/",
+    to: "/Invoice/Bills",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -206,8 +206,8 @@ const Invoice = [
     icon: FcDiploma2,
   },
   {
-    name: "| Bisiness Report",
-    to: "/",
+    name: "| Business Report",
+    to: "/Invoice/BusinessReport",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",

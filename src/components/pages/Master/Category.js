@@ -140,7 +140,7 @@ export default function Category() {
           <div className="w-full p-5 ">
             <div className="relative flex flex-col min-w-0 break-words w-full shadow-lg text-black border border-yellow-500 rounded-[10px]">
               <div className= "bg-slate-200 h-[60px] w-[100%] rounded-t-[10px] flex items-center justify-between">
-                <p className="font-semibold text-xl px-4 flex items-center gap-2"> <FcAlphabeticalSortingAz className=" h-10 w-8"/> Categories</p>   
+                <p className="font-semibold text-xl px-4 flex items-center gap-2"> <FcAlphabeticalSortingAz className=" h-10 w-8"/>Manage Categories</p>   
                     <button className="px-3 mx-5 py-1 text-black border border-yellow-500 rounded hover:bg-black hover:text-white flex gap-1">
                       <FcPlus className="mt-1" /> Add Categories
                     </button>

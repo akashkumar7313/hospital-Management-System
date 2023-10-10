@@ -13,6 +13,13 @@ import Nationality from './components/pages/Master/Nationality';
 import AddDoctor from './components/pages/Doctor/AddDoctor';
 import DoctorCommision from './components/pages/Doctor/DoctorCommision';
 import Report from './components/pages/Doctor/Report';
+import Patient from './components/pages/Patient/Patient';
+import Registration from './components/pages/Patient/Registration';
+import VisitDetails from './components/pages/Patient/VisitDetails';
+import ReportManager from './components/pages/Patient/ReportManager';
+import CreateInvoice from './components/pages/Invoice/CreateInvoice';
+import Bills from './components/pages/Invoice/Bills';
+import BusinessReport from './components/pages/Invoice/BusinessReport ';
 
 function App() {
   return (
@@ -29,6 +36,13 @@ function App() {
       <Route path="/Doctor/AddDoctor" element={<AddDoctor />}></Route>
       <Route path="/Doctor/DoctorCommision" element={<DoctorCommision />}></Route>
       <Route path="/Doctor/Report" element={<Report />}></Route>
+      <Route path="/Patient/Patients" element={<Patient />}></Route>
+      <Route path="/Patient/Registration" element={<Registration />}></Route>
+      <Route path="/Patient/VisitDetails" element={<VisitDetails />}></Route>
+      <Route path="/Patient/ReportManager" element={<ReportManager />}></Route>
+      <Route path="/Invoice/CreateInvoice" element={<CreateInvoice />}></Route>
+      <Route path="/Invoice/Bills" element={<Bills />}></Route>
+      <Route path="/Invoice/BusinessReport" element={<BusinessReport />}></Route>
       <Route path="/" element={<Layout />}>
           <Route path="navbar" element={<Navbar />} />
           <Route path="mainBox" element={<MainBox />} />
