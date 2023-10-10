@@ -83,7 +83,7 @@ export default function TestParticulars() {
                         Dashboard
                       </NavLink>
                       <NavLink
-                        to="/Master/BloodGroups"
+                        to="/Master/TestParticulars"
                         className="text-[14px] font-semibold text-slate-500"
                       >
                         Test Particulars

@@ -83,7 +83,7 @@ export default function Nationality() {
                         Dashboard
                       </NavLink>
                       <NavLink
-                        to="/Master/BloodGroups"
+                        to="/Master/Nationality"
                         className="text-[14px] font-semibold text-slate-500"
                       >
                         Nationality

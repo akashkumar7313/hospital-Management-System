@@ -120,7 +120,7 @@ const Masters = [
 const Doctor = [
   {
     name: "| Add Doctor",
-    to: "/",
+    to: "/Doctor/AddDoctor",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -129,7 +129,7 @@ const Doctor = [
   },
   {
     name: "| Doctor Commision",
-    to: "/",
+    to: "/Doctor/DoctorCommision",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",
@@ -138,7 +138,7 @@ const Doctor = [
   },
   {
     name: "| Report",
-    to: "/",
+    to: "/Doctor/Report",
     component: Link,
     className:
       "text-sm font-semibold leading-6 hover:text-blue-500 text-gray-900",

@@ -10,6 +10,9 @@ import BloodGroups from './components/pages/Master/BloodGroups';
 import TestParticulars from './components/pages/Master/TestParticulars';
 import PaymentMode from './components/pages/Master/PaymentMode';
 import Nationality from './components/pages/Master/Nationality';
+import AddDoctor from './components/pages/Doctor/AddDoctor';
+import DoctorCommision from './components/pages/Doctor/DoctorCommision';
+import Report from './components/pages/Doctor/Report';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
       <Route path="/Master/TestParticulars" element={<TestParticulars />}></Route>
       <Route path="/Master/PaymentMode" element={<PaymentMode />}></Route>
       <Route path="/Master/Nationality" element={<Nationality />}></Route>
+      <Route path="/Doctor/AddDoctor" element={<AddDoctor />}></Route>
+      <Route path="/Doctor/DoctorCommision" element={<DoctorCommision />}></Route>
+      <Route path="/Doctor/Report" element={<Report />}></Route>
       <Route path="/" element={<Layout />}>
           <Route path="navbar" element={<Navbar />} />
           <Route path="mainBox" element={<MainBox />} />
